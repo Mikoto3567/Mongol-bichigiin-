@@ -17,8 +17,8 @@ const Header = () => {
                     <ul className="flex flex-nowrap items-center justify-between gap-6 whitespace-nowrap">
                         <li><a href="/">Home</a></li>
                         <li><a href="/alphabet">Цагаан Толгой</a></li>
-                        <li><a href="/grammar-lessons">Дүрмийн сан/Даалгавар</a></li>
-                        <li><a href="/translate-reading">Хөрвүүлэлт/Уншлага</a></li>
+                        <li><a href="/grammar-lessons">Дүрмийн сан / Даалгавар</a></li>
+                        <li><a href="/translate-reading">Хөрвүүлэлт / Уншлага</a></li>
                         <li><a href="/exams">Шалгалт өгөх</a></li>
                         <li><a href="/recommended-books">Санал болгох номнууд</a></li>
                     </ul>
