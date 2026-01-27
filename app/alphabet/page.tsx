@@ -12,8 +12,7 @@ export default function alphabet() {
         <button className=" bg-blue-300 rounded-4xl px-7 py-30"> Эгшиг үсэг </button>
         <button className=" bg-blue-300 rounded-4xl px-7 py-30"> Гийгүүлэгч үсэг </button>
         <button className=" bg-blue-300 rounded-4xl px-7 py-30"> Урт эгшиг</button>
-
-           
+        
       </div>
     </>
   );

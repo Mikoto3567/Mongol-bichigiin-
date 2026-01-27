@@ -2,7 +2,12 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #F7F3F0;
+  --header-bg: #F2E5DA;
+  --text-color: #633C1C;
+  --btn: rgba(0,0,0,.54);
+
+
 };
 
 body {
