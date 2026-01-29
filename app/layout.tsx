@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header";
 import Image from "next/image";
+import Background from "@/components/ui";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,15 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <div className="relative aspect-video h-40">
-          {/* <Image
-            src={"/image/pattern.png"}
-            alt=""
-            fill
-            className="object-cover"
-          /> */}
-        </div>
+        <Header/>
+        <Background/>
+        
         <main>{children}</main>
       </body>
     </html>

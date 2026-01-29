@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #633C1C;
   --foreground: #F7F3F0;
-  --header-bg: #F2E5DA;
+  --header-bg: oklch(45.6% 0.147 284.1);
   --text-color: #633C1C;
   --btn: rgba(0,0,0,.54);
 
 
 };
-
+/* html {
+  background: var(--foreground)
+} */
 body {
-  background: var(--background);
+  background: var(--header-bg) ;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
-  width: 100%;
+  margin:  20px 20px 20px 0px;
+  
 }
