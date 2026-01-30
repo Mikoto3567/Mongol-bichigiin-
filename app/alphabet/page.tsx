@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function alphabet() {
-  return 
+  return (
+    <div className="flex">
+      Sainuu
+    </div>
+  )
 }
