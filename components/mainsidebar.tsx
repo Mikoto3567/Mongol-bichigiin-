@@ -45,34 +45,34 @@ const items = [
     url: "./recommended-books",
     icon: Calendar,
   },
-  // {
-  //   title: "EXAMS",
-  //   url: "./",
-  //   icon: Calendar,
-  // },
+  {
+    title: "About Us",
+    url: "./about_us",
+    icon: Calendar,
+  },
 ]
 
 export function AppSidebar() {
   return (
     <Sidebar 
+    
       className="border-none" 
     >
       <SidebarContent 
-        // Энд шууд өнгөө өгчих. Shadcn-ийн хувьсагчийг алгасаж байна.
-        style={{ backgroundColor: 'oklch(0.48 0.18 260.45)' }}
-        className="rounded-r-[30px] text-white"
+          className=" bg-[#3d539f] rounded-r-[30px] text-[#edeef0]"
       >
         <SidebarGroup>
           <div className="px-6 py-10">
-            <span className="text-2xl font-bold italic">Smart</span>
+            <span className="text-2xl font-bold italic">TIG</span>
           </div>
           <SidebarGroupContent>
+        
             <SidebarMenu className="px-2">
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
                     asChild
-                    className="hover:bg-white/10 text-white/90 data-[active=true]:bg-white data-[active=true]:text-[#3E54AC] rounded-xl h-11"
+                    className="hover:bg-[#edeef0] hover:text-[#3d539f] text-white/90 data-[active=true]:bg-[#3d539f]  rounded-xl h-11"
                   >
                     <a href={item.url} className="flex items-center gap-3">
                       <item.icon size={18} />
