@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-import { AppSidebar } from "@/components/sidebar"
+import { AppSidebar } from "@/components/mainsidebar"
 // import Header from "@/components/header" 
 import Image from "next/image";
+import Header  from "@/components/header";
 // import Background from "@/components/ui";
 
 const geistSans = Geist({
@@ -33,19 +34,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* SidebarProvider нь бүх компонентыг дотроо багтаах ёстой */}
         <SidebarProvider>
-          
           <AppSidebar />
-          
-          <div className="flex flex-col w-full "> 
-            {/* <Header /> */}
-            <main className="flex-1 p-4 ">
-             
-              <SidebarTrigger />
-              {children}
-            </main>
-          </div>
+          <main >
+            
+            <SidebarTrigger />
+            {children}
+          </main>
+
         </SidebarProvider>
       </body>
     </html>

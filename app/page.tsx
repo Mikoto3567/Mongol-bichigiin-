@@ -1,6 +1,7 @@
 import React from "react"
 
 export default function Home() {
-  return 
+  return (
+    <div className="bg-[#F2F5F9]"></div>  )
   
 }

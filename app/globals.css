@@ -3,8 +3,10 @@
 
 @layer base {
   :root {
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
+    /* Shadcn-ийн хувьсагчийг OKLCH-оор шууд хүчээр солих */
+    --sidebar-background: oklch(0.48 0.18 260.45) !important;
+    --sidebar-foreground: oklch(0.98 0.01 260) !important;
+    --background: oklch(0.96 0.01 250) !important;
     --sidebar-primary: oklch(0.205 0 0);
     --sidebar-primary-foreground: oklch(0.985 0 0);
     --sidebar-accent: oklch(0.97 0 0);
