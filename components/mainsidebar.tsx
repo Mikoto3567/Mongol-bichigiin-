@@ -39,7 +39,7 @@ const items = [
   },
   {
     title: "Цагаан толгой",
-    url: "./alphabet",
+    url: "./egshig",
     icon: CaseUpper,
   },
   {
@@ -71,7 +71,7 @@ const items = [
 
 export function AppSidebar() {
   return (
-    <Sidebar className="border-none">
+    <Sidebar className="border-none top=">
       <SidebarContent className=" bg-[#3d539f] rounded-r-[30px] text-[#edeef0]">
         <SidebarGroup>
           <div className="px-6 py-10">
