@@ -12,7 +12,7 @@ return (
 
             <div className="">
                 <button className="p-2 w-10  text-gray-400 hover:bg-gray-100 rounded-full"> <BellRing /> </button>
-                <button className="p-2 w-10  text-gray-400 hover:bg-gray-100 rounded-full"> <UserRound />  </button>
+                <button className="p-2 w-10  text-gray-400 hover:bg-gray-100 rounded-full"> <UserRound /> ..  </button>
             </div>
 
     </header>
