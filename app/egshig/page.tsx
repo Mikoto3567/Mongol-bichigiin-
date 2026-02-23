@@ -80,7 +80,7 @@ export default function Egshig() {
                 <span>Нум</span>
                 <span></span>
                 <span>Ээтгэр</span>
-                <span></span>
+                <span>mmmmmm</span>
               </div>
               <div className="inline-grid grid-rows-6 gap-3 items-center justify-items-center">
                 <span>Жалжгар</span>
