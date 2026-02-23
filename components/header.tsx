@@ -1,6 +1,4 @@
 import { Menu, BellRing, UserRound } from "lucide-react"
-import Component from "./AlphabeDropdownt"
-import AlphabetDropdown from "./AlphabeDropdownt"
 
 export default function Header() {
     return (
@@ -13,7 +11,6 @@ export default function Header() {
                 <nav>
                     <ul className="flex flex-row items-center gap-12 whitespace-nowrap no-underline bg-[#3d539f] text-white text-l focus-within:shadow-amber-50 border-0 rounded-4xl px-10 py-3 ">
                         <li><a href="/" className="hover:[text-shadow:0_0_8px_rgba(255,255,255,0.9)]">Home</a></li>
-                        <li> <AlphabetDropdown/> </li>
 
                         <li><a href="/grammar-lesson">Дасгал даалгавар</a></li>
                         <li><a href="/translate-reading">Унших дасгал</a></li>
