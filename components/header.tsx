@@ -1,30 +1,74 @@
-import { Menu, BellRing, UserRound } from "lucide-react"
-import tailwindcss from "tailwindcss"
+"use client";
+import { useState, useEffect } from "react";
+import { Menu, User, X } from "lucide-react";
 
 export default function Header() {
-    return (
-        <header className="flex flex-row items-center justify-center bg-[#e1d5c8] mx-auto pt-8 py-4 min-h-16 w-full">
-    
-            <div className="flex flex-row items-center justify-center gap-30">
-                <a href="menu/" className="text-black hover:opacity-80">
-                    <Menu size={24} />
-                </a>
-                <nav>
-                    <ul className="flex items-center gap-10 no-underline bg-[#ada095] drop-shadow-4xl text-white text-l focus-within:shadow-gray-400 border-0 rounded-4xl px-10 py-3 ">
-                        <li><a href="/" className="hover:[text-shadow:0_0_8px_rgba(255,255,255,0.9)]">Нүүр</a></li>
-                        <li><a href="/dursgalt/" className="hover:[text-shadow:0_0_8px_rgba(255,255,255,0.9)]">35 Хаад </a></li>
-                        <li><a href="/domog/" className="hover:[text-shadow:0_0_8px_rgba(255,255,255,0.9)]">Түүх Домог</a></li>                      
-                        <li><a href="/test" className="hover:[text-shadow:0_0_8px_rgba(255,255,255,0.9)]">Мэдлэгээ сорьё</a></li>
+  const [mounted, setMounted] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-                    </ul>
-                </nav>
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
-                <div className="flex flex-row items-center gap-4 ">
-                    <a href="/notifcations/" className="hover:opacity-80"><BellRing size={22} /></a>
-                    <a href="/Profile" className="hover:opacity-80"><UserRound size={22} /></a>
-                </div>
-                
-            </div>
-        </header>
-    )
+  if (!mounted) return null;
+
+  const navItems = [
+    { label: "Нүүр", href: "/" },
+    { label: "37 хаад", href: "./king" },
+    { label: "Дурсгалт өв", href: "./dursgalt" },
+    { label: "Түүх Домог", href: "./domog" },
+    { label: "Мэдлэгээ сорья", href: "./quiz" },
+  ];
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#e8dfd2]/95 backdrop-blur-sm border-b border-[#c4b5a0]/20">
+      <div className="container mx-auto px-6 py-4">
+        <div className="flex items-center justify-between">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="p-2 rounded-lg hover:bg-[#d4c4b0] transition-colors"
+            aria-label="Menu"
+          >
+            {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          <nav className="hidden md:flex items-center gap-2 mx-auto bg-[#9d9082]/80 rounded-full px-6 py-2 backdrop-blur-sm">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                className="px-4 py-2 text-sm text-white hover:bg-white/20 rounded-full transition-all duration-300"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-2">
+            <button
+              className="p-2 rounded-lg hover:bg-[#d4c4b0] transition-colors"
+              aria-label="User"
+            >
+              <User size={20} />
+            </button>
+          </div>
+        </div>
+
+        {menuOpen && (
+          <nav className="md:hidden mt-4 pb-4 space-y-2 animate-in fade-in slide-in-from-top-2 duration-200">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="block px-4 py-3 text-sm bg-[#9d9082]/60 text-white rounded-lg hover:bg-[#9d9082]/80 transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        )}
+      </div>
+    </header>
+  );
 }

@@ -19,8 +19,7 @@ export const metadata: Metadata = {
   description: "TeamProject",
 };
 
-// 1. Import-уудаа дээд талд нь нэмээрэй
-// Header-ээ бас энд байгаа гэж үзлээ
+
 
 export default function RootLayout({
   children,
@@ -31,6 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      suppressHydrationWarning 
       >
         <Header />
         {children}
