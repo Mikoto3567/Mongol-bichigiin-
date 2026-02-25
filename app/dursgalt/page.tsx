@@ -17,7 +17,7 @@ export default function DursgaltPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-[#e1d5c8] p-8">
+    <div className="min-h-screen bg-[#e1d5c8] pt-24 pb-16">
       <h1 className="text-3xl font-bold text-center mb-12 text-[#4a3728]">Түүхэн дурсгалт зүйлс</h1>
       <div className="max-w-4xl mx-auto space-y-10">
         {monuments.map((item, index) => (

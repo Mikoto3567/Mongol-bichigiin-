@@ -407,7 +407,7 @@ export default function History() {
           </button>
         </section>
 
-        <section className="container mx-auto px-6 py-5">
+        <section className="container mx-auto px-6 py-5 ">
           <div className="grid grid-cols-1 gap-6 max-w-6xl mx-auto">
             {currentCards.map((card, index) => (
               <div
