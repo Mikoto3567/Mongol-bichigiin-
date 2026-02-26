@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, User, X } from "lucide-react";
+import Link from "next/link";
 
 export default function Header() {
   const [mounted, setMounted] = useState(false);
@@ -14,10 +15,10 @@ export default function Header() {
 
   const navItems = [
     { label: "Нүүр", href: "/" },
-    { label: "37 хаад", href: "./king" },
-    { label: "Дурсгалт өв", href: "./dursgalt" },
-    { label: "Түүх Домог", href: "./domog" },
-    { label: "Мэдлэгээ сорья", href: "./quiz" },
+    { label: "37 хаад", href: "/king" },
+    { label: "Түүх Домог", href: "/domog" },
+    { label: "Дурсгалт өв", href: "/dursgalt" },
+    { label: "Мэдлэгээ сорьё", href: "/quiz" },
   ];
 
   return (
