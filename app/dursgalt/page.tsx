@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 export default function DursgaltPage() {
-  // 1. useState ашиглан сонгогдсон зургийг хадгалах (Хичээл 41)
+  
   const [selectedImg, setSelectedImg] = useState(null);
 
   const monuments = [
@@ -30,7 +30,7 @@ export default function DursgaltPage() {
               <img 
                 src={item.img} 
                 alt={item.title} 
-                // 2. Зураг дээр дарахад утгыг оноох (Хичээл 18 - JS Syntax/Events)
+                
                 onClick={() => setSelectedImg(item.img)}
                 className="w-full h-64 object-contain bg-white cursor-pointer hover:scale-105 transition-transform duration-300" 
               />
@@ -43,7 +43,7 @@ export default function DursgaltPage() {
         ))}
       </div>
 
-      {/* 3. Зураг томорч харагдах хэсэг (Хичээл 07 - Fixed Position) */}
+      
       {selectedImg && (
         <div 
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
