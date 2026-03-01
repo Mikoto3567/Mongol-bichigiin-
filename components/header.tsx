@@ -18,7 +18,6 @@ export default function Header() {
     { label: "37 хаад", href: "/king" },
     { label: "Түүх Домог", href: "/domog" },
     { label: "Дурсгалт өв", href: "/dursgalt" },
-    { label: "Мэдлэгээ сорьё", href: "/quiz" },
   ];
 
   return (
@@ -45,14 +44,7 @@ export default function Header() {
             ))}
           </nav>
 
-          <div className="flex items-center gap-2">
-            <button
-              className="p-2 rounded-lg hover:bg-[#d4c4b0] transition-colors"
-              aria-label="User"
-            >
-              <User size={20} />
-            </button>
-          </div>
+         
         </div>
 
         {menuOpen && (
