@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 
 export default function DursgaltPage() {
   
-  const [selectedImg, setSelectedImg] = useState(null);
-
+const [selectedImg, setSelectedImg] = useState<string | null>(null);
   const monuments = [
     { id: 1, img: "/image/1.jpg", title: "Гүюг хааны захиа", desc: "1246 онд Ромын папад Гүюг хааны илгээсэн хариу захидал." },
     { id: 2, img: "/image/2.jpg", title: "Гүюг хааны тамганы бичээс", desc: "1246-1248 оны Гүюг хааны тамганы дардас бичээс." },
